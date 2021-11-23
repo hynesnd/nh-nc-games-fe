@@ -6,15 +6,15 @@ const ReviewsList = ({ currentCategory }) => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    getReviews().then((reviewsFromServer) => {
+    getReviews(currentCategory).then((reviewsFromServer) => {
       setReviews(reviewsFromServer);
     });
-  }, []);
+  }, [currentCategory]);
 
   return (
     <ul>
       {reviews.map((review) => {
-        return <ReviewCard review={review} />;
+        return <ReviewCard key={review.review_id} review={review} />;
       })}
     </ul>
   );
