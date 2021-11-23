@@ -4,20 +4,27 @@ import ReviewCard from "./ReviewCard";
 
 const ReviewsList = ({ currentCategory }) => {
   const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     getReviews(currentCategory).then((reviewsFromServer) => {
       setReviews(reviewsFromServer);
+      setIsLoading(false);
     });
   }, [currentCategory]);
 
-  return (
-    <ul>
-      {reviews.map((review) => {
-        return <ReviewCard key={review.review_id} review={review} />;
-      })}
-    </ul>
-  );
+  if (isLoading) {
+    return <span>Loading...</span>;
+  } else {
+    return (
+      <ul>
+        {reviews.map((review) => {
+          return <ReviewCard key={review.review_id} review={review} />;
+        })}
+      </ul>
+    );
+  }
 };
 
 export default ReviewsList;
