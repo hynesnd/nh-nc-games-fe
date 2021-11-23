@@ -19,3 +19,9 @@ export const getReviews = (currentCategory) => {
     return res.data.reviews;
   });
 };
+
+export const getUser = (username) => {
+  return ncGames.get(/users/${username}).then((res) => {
+    return res.data.user
+  })
+}
