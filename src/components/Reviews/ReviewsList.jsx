@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getReviews } from "../../utils/api";
+import ReviewCard from "./ReviewCard";
 
 const ReviewsList = ({ currentCategory }) => {
   const [reviews, setReviews] = useState([]);
@@ -13,7 +14,7 @@ const ReviewsList = ({ currentCategory }) => {
   return (
     <ul>
       {reviews.map((review) => {
-        return <li>{review.title}</li>;
+        return <ReviewCard review={review} />;
       })}
     </ul>
   );
