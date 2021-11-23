@@ -10,8 +10,12 @@ export const getCategories = () => {
   });
 };
 
-export const getReviews = () => {
-  return ncGames.get("/reviews").then((res) => {
+export const getReviews = (currentCategory) => {
+  let path = "/reviews";
+
+  if (currentCategory !== "All") path += `?category=${currentCategory}`;
+
+  return ncGames.get(path).then((res) => {
     return res.data.reviews;
   });
 };
