@@ -8,7 +8,7 @@ const CatSelector = ({ setCurrentCategory }) => {
     getCategories().then((categoriesFromApi) => {
       setCategoryList(categoriesFromApi);
     });
-  });
+  }, []);
 
   return (
     <div>
