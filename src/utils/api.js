@@ -21,7 +21,7 @@ export const getReviews = (currentCategory) => {
 };
 
 export const getUser = (username) => {
-  return ncGames.get(/users/${username}).then((res) => {
-    return res.data.user
-  })
-}
+  return ncGames.get(`/users/${username}`).then((res) => {
+    return res.data.user;
+  });
+};
