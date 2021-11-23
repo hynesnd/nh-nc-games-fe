@@ -6,6 +6,6 @@ const ncGames = axios.create({
 
 export const getCategories = () => {
   return ncGames.get("/categories").then((res) => {
-    console.log(res.data);
+    return res.data.categories;
   });
 };
