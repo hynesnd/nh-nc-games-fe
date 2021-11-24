@@ -31,3 +31,9 @@ export const getUser = (username) => {
     return res.data.user;
   });
 };
+
+export const getComments = (review_id) => {
+  return ncGames.get(`/reviews/${review_id}/comments`).then((res) => {
+    return res.data.comments;
+  });
+};
