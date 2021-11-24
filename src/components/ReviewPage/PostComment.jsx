@@ -30,7 +30,7 @@ const PostComment = ({ review_id, setComments }) => {
           onChange={(event) => setCommentInput(event.target.value)}
         ></textarea>{" "}
         <br />
-        <input type="submit" value="Post comment" />
+        <input type="submit" value="Post comment" disabled={!isLoggedIn} />
       </form>
     </div>
   );
