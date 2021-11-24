@@ -24,8 +24,6 @@ const CommentList = ({ review_id }) => {
       });
   }, []);
 
-  console.log(comments);
-
   if (isLoading) {
     return <span>Loading...</span>;
   } else if (errSpan) {
