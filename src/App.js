@@ -19,7 +19,6 @@ function App() {
           <Route path="/reviews/:review_id" element={<ReviewPage />} />
         </Routes>
       </div>
-      ;
     </BrowserRouter>
   );
 }
