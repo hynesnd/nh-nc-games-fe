@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 import { getComments } from "../../utils/api";
 import CommentCard from "./CommentCard";
+import PostComment from "./PostComment";
 
 const CommentList = ({ review_id }) => {
   const [comments, setComments] = useState([]);
@@ -31,6 +32,7 @@ const CommentList = ({ review_id }) => {
   } else {
     return (
       <div>
+        <PostComment review_id={review_id} setComments={setComments} />
         {comments.map((comment) => {
           return <CommentCard key={comment.comment_id} comment={comment} />;
         })}
