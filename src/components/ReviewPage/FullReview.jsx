@@ -12,7 +12,7 @@ const FullReview = ({ review_id }) => {
       setReview(review);
       setIsLoading(false);
     });
-  }, []);
+  }, [review_id]);
 
   if (isLoading) {
     return <span>Loading...</span>;
