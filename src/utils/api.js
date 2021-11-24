@@ -20,6 +20,12 @@ export const getReviews = (currentCategory) => {
   });
 };
 
+export const getSingleReview = (review_id) => {
+  return ncGames.get(`reviews/${review_id}`).then((res) => {
+    return res.data.review;
+  });
+};
+
 export const getUser = (username) => {
   return ncGames.get(`/users/${username}`).then((res) => {
     return res.data.user;
