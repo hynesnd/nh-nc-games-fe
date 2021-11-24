@@ -23,7 +23,7 @@ const CommentList = ({ review_id }) => {
           setErrSpan("No comments yet!");
         }
       });
-  }, []);
+  }, [review_id]);
 
   if (isLoading) {
     return <span>Loading...</span>;
