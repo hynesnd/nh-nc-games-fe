@@ -10,7 +10,7 @@ const ReviewCard = ({ review }) => {
       <h3>{review.category}</h3>
       <img src={review.review_img_url} alt={review.title} />
       <p>{review.owner}</p>
-      <p>{review.comment_count}</p>
+      <p>comments: {review.comment_count}</p>
       <button>Vote</button>
     </div>
   );
