@@ -37,3 +37,14 @@ export const getComments = (review_id) => {
     return res.data.comments;
   });
 };
+
+export const postComment = (review_id, username, body) => {
+  return ncGames
+    .post(`/reviews/${review_id}/comments`, {
+      username: username,
+      body: body,
+    })
+    .then((res) => {
+      return res.data.comment;
+    });
+};
