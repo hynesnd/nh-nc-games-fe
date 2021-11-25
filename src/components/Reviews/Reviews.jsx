@@ -1,14 +1,19 @@
 import { useState } from "react";
-import CatSelector from "./CatSelector";
+import { useParams } from "react-router";
+import QuerySelector from "./QuerySelector";
 import ReviewsList from "./ReviewsList";
 
 const Reviews = () => {
-  const [currentCategory, setCurrentCategory] = useState("");
+  const { slug } = useParams();
+  const [queries, setQueries] = useState({
+    sort_by: undefined,
+    order: undefined,
+  });
 
   return (
     <div>
-      <CatSelector setCurrentCategory={setCurrentCategory} />
-      <ReviewsList currentCategory={currentCategory} />
+      <QuerySelector setQueries={setQueries} />
+      <ReviewsList currentCategory={slug} queries={queries} />
     </div>
   );
 };
