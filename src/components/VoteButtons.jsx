@@ -4,7 +4,7 @@ import { UserContext } from "../contexts/UserContext";
 
 const VoteButtons = ({ voteType, voteId, votes }) => {
   const { isLoggedIn } = useContext(UserContext);
-  const [voteCount, setVoteVount] = useState(votes);
+  // const [voteCount, setVoteCount] = useState(votes);
   const [addedVotes, setAddedVotes] = useState(0);
 
   const handleUpvote = () => {
@@ -34,7 +34,7 @@ const VoteButtons = ({ voteType, voteId, votes }) => {
       <button onClick={handleUpvote} disabled={!isLoggedIn}>
         ⬆️
       </button>
-      <p>{voteCount + addedVotes}</p>
+      <p>{votes + addedVotes}</p>
       <button onClick={handleDownvote} disabled={!isLoggedIn}>
         ⬇️
       </button>
