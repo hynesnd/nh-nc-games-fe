@@ -10,14 +10,14 @@ export const getCategories = () => {
   });
 };
 
-export const getReviews = (currentCategory) => {
-  let path = "/reviews";
-
-  if (currentCategory !== "All") path += `?category=${currentCategory}`;
-
-  return ncGames.get(path).then((res) => {
-    return res.data.reviews;
-  });
+export const getReviews = (category, sort_by, order) => {
+  return ncGames
+    .get("/reviews", {
+      params: { category: category, sort_by: sort_by, order: order },
+    })
+    .then((res) => {
+      return res.data.reviews;
+    });
 };
 
 export const getSingleReview = (review_id) => {
