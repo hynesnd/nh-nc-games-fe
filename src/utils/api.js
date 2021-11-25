@@ -54,3 +54,11 @@ export const deleteComment = (comment_id) => {
     return res;
   });
 };
+
+export const patchCommentVotes = (comment_id, vote) => {
+  return ncGames
+    .patch(`comments/${comment_id}`, { inc_votes: vote })
+    .then((res) => {
+      return res.data.review;
+    });
+};
