@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { patchCommentVotes } from "../utils/api";
+import { patchCommentVotes, patchReviewVotes } from "../utils/api";
 
 const VoteButtons = ({ voteType, voteId, votes }) => {
   const [voteCount, setVoteVount] = useState(votes);
@@ -10,13 +10,20 @@ const VoteButtons = ({ voteType, voteId, votes }) => {
       setAddedVotes((prevVotes) => prevVotes + 1);
       patchCommentVotes(voteId, 1);
     }
+    if (voteType === "review") {
+      setAddedVotes((prevVotes) => prevVotes + 1);
+      patchReviewVotes(voteId, 1);
+    }
   };
 
   const handleDownvote = () => {
     if (voteType === "comment") {
-      console.log("in downvote");
       setAddedVotes((prevVotes) => prevVotes - 1);
       patchCommentVotes(voteId, -1);
+    }
+    if (voteType === "review") {
+      setAddedVotes((prevVotes) => prevVotes - 1);
+      patchReviewVotes(voteId, -1);
     }
   };
 
