@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 import { getSingleReview } from "../../utils/api";
+import VoteButtons from "../VoteButtons";
 
 const FullReview = ({ review_id }) => {
   const [review, setReview] = useState();
@@ -25,6 +26,11 @@ const FullReview = ({ review_id }) => {
         <p>Review author: {review.owner}</p>
         <p>Designer: {review.designer}</p>
         <p>{review.review_body}</p>
+        <VoteButtons
+          voteType="review"
+          voteId={review.review_id}
+          votes={review.votes}
+        />
       </div>
     );
   }
