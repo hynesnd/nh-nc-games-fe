@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import VoteButtons from "../VoteButtons";
 
 const ReviewCard = ({ review }) => {
   return (
@@ -11,7 +12,11 @@ const ReviewCard = ({ review }) => {
       <img src={review.review_img_url} alt={review.title} />
       <p>{review.owner}</p>
       <p>comments: {review.comment_count}</p>
-      <button>Vote</button>
+      <VoteButtons
+        voteType="review"
+        voteId={review.review_id}
+        votes={review.votes}
+      />
     </div>
   );
 };
