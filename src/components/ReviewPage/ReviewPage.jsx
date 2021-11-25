@@ -11,7 +11,7 @@ const ReviewPage = () => {
     return <span>{errSpan}</span>;
   } else {
     return (
-      <div>
+      <div className="review-page">
         <FullReview review_id={review_id} setErrSpan={setErrSpan} />
         <CommentList review_id={review_id} />
       </div>

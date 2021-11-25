@@ -29,7 +29,7 @@ const ReviewsList = ({ currentCategory, queries }) => {
     return <span>{errSpan}</span>;
   } else {
     return (
-      <ul>
+      <ul className="reviews-list">
         {reviews.map((review) => {
           return <ReviewCard key={review.review_id} review={review} />;
         })}

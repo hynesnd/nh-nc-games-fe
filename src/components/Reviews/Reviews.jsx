@@ -11,7 +11,7 @@ const Reviews = () => {
   });
 
   return (
-    <div>
+    <div className="reviews">
       <QuerySelector setQueries={setQueries} />
       <ReviewsList currentCategory={slug} queries={queries} />
     </div>

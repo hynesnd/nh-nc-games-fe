@@ -12,7 +12,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav>
+    <nav className="nav-bar">
       <Link to="/">All Reviews</Link>
       {categoryList.map((category) => {
         return (

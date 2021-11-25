@@ -9,7 +9,7 @@ const Login = () => {
 
   if (!isLoggedIn) {
     return (
-      <div>
+      <div className="login-form">
         <form
           onSubmit={(event) => {
             event.preventDefault();

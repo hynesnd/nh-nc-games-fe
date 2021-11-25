@@ -30,7 +30,7 @@ const VoteButtons = ({ voteType, voteId, votes }) => {
   };
 
   return (
-    <div>
+    <div className="vote-buttons">
       <button onClick={handleUpvote} disabled={!isLoggedIn}>
         ⬆️
       </button>

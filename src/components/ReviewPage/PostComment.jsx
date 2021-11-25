@@ -8,7 +8,7 @@ const PostComment = ({ review_id, setComments }) => {
   const { user, isLoggedIn } = useContext(UserContext);
 
   return (
-    <div>
+    <div className="post-comment">
       <form
         onSubmit={(event) => {
           event.preventDefault();

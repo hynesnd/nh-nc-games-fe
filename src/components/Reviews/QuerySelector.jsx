@@ -26,7 +26,7 @@ const QuerySelector = ({ setQueries }) => {
     });
   };
   return (
-    <div>
+    <div className="query-selector">
       Sort by:{" "}
       <select onChange={(event) => handleSortBy(event.target.value)}>
         <option value="created_at">Created at</option>

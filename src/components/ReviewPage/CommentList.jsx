@@ -31,7 +31,7 @@ const CommentList = ({ review_id }) => {
     return <span>{errSpan}</span>;
   } else {
     return (
-      <div>
+      <div className="comment-list">
         <PostComment review_id={review_id} setComments={setComments} />
         {comments.map((comment) => {
           return <CommentCard key={comment.comment_id} comment={comment} />;
