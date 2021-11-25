@@ -3,16 +3,23 @@ import { useEffect } from "react/cjs/react.development";
 import { getSingleReview } from "../../utils/api";
 import VoteButtons from "../VoteButtons";
 
-const FullReview = ({ review_id }) => {
+const FullReview = ({ review_id, setErrSpan }) => {
   const [review, setReview] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(true);
-    getSingleReview(review_id).then((review) => {
-      setReview(review);
-      setIsLoading(false);
-    });
+    getSingleReview(review_id)
+      .then((review) => {
+        setReview(review);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        if (err.response.status === 404) {
+          setErrSpan("Review not found.");
+          setIsLoading(false);
+        }
+      });
   }, [review_id]);
 
   if (isLoading) {
