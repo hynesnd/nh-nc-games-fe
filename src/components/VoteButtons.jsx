@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { patchCommentVotes, patchReviewVotes } from "../utils/api";
+import { UserContext } from "../contexts/UserContext";
 
 const VoteButtons = ({ voteType, voteId, votes }) => {
+  const { isLoggedIn } = useContext(UserContext);
   const [voteCount, setVoteVount] = useState(votes);
   const [addedVotes, setAddedVotes] = useState(0);
 
@@ -29,9 +31,13 @@ const VoteButtons = ({ voteType, voteId, votes }) => {
 
   return (
     <div>
-      <button onClick={handleUpvote}>⬆️</button>
+      <button onClick={handleUpvote} disabled={!isLoggedIn}>
+        ⬆️
+      </button>
       <p>{voteCount + addedVotes}</p>
-      <button onClick={handleDownvote}>⬇️</button>
+      <button onClick={handleDownvote} disabled={!isLoggedIn}>
+        ⬇️
+      </button>
     </div>
   );
 };
