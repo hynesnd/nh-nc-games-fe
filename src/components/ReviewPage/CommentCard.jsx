@@ -2,6 +2,7 @@ import React from "react";
 import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { deleteComment } from "../../utils/api";
+import VoteButtons from "../VoteButtons";
 
 const CommentCard = ({ comment }) => {
   const { user } = useContext(UserContext);
@@ -26,7 +27,11 @@ const CommentCard = ({ comment }) => {
             Delete comment
           </button>
         ) : null}
-        <button>Vote</button>
+        <VoteButtons
+          voteType="comment"
+          voteId={comment.comment_id}
+          votes={comment.votes}
+        />
       </div>
     );
   }
