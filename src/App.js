@@ -14,7 +14,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Reviews />} />
-          <Route path="/reviews" element={<Reviews />} />
+          <Route path="/categories/:slug" element={<Reviews />} />
           <Route path="/login" element={<Login />} />
           <Route path="/reviews/:review_id" element={<ReviewPage />} />
         </Routes>
