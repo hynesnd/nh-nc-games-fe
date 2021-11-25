@@ -2,17 +2,19 @@ import { useState, useEffect } from "react";
 import { getReviews } from "../../utils/api";
 import ReviewCard from "./ReviewCard";
 
-const ReviewsList = ({ currentCategory }) => {
+const ReviewsList = ({ currentCategory, queries }) => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     setIsLoading(true);
-    getReviews(currentCategory).then((reviewsFromServer) => {
-      setReviews(reviewsFromServer);
-      setIsLoading(false);
-    });
-  }, [currentCategory]);
+    getReviews(currentCategory, queries.sort_by, queries.order).then(
+      (reviewsFromServer) => {
+        setReviews(reviewsFromServer);
+        setIsLoading(false);
+      }
+    );
+  }, [currentCategory, queries]);
 
   if (isLoading) {
     return <span>Loading...</span>;
