@@ -4,7 +4,6 @@ import { UserContext } from "../contexts/UserContext";
 
 const VoteButtons = ({ voteType, voteId, votes }) => {
   const { isLoggedIn } = useContext(UserContext);
-  // const [voteCount, setVoteCount] = useState(votes);
   const [addedVotes, setAddedVotes] = useState(0);
 
   const handleUpvote = () => {
