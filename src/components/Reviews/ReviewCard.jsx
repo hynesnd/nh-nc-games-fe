@@ -19,7 +19,9 @@ const Card = styled.div`
 const Image = styled.img`
   grid-area: image;
   max-width: 100%;
+  min-width: 100%
   max-height: 100%;
+  min-height-100%;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   overflow: hidden;
