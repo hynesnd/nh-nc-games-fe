@@ -75,7 +75,7 @@ const FullReview = ({ review_id, setErrSpan }) => {
           setIsLoading(false);
         }
       });
-  }, [review_id]);
+  }, [review_id, setErrSpan]);
 
   if (isLoading) {
     return <span>Loading...</span>;
