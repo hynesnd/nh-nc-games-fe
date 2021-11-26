@@ -5,11 +5,18 @@ import Reviews from "./components/Reviews/Reviews";
 import Login from "./components/Login/Login";
 import NavBar from "./components/NavBar";
 import ReviewPage from "./components/ReviewPage/ReviewPage";
+import styled from "styled-components";
+
+const Body = styled.div`
+  background-color: #009dae;
+  min-height: 100vh;
+  padding-bottom: 1px;
+`;
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <Body className="App">
         <Header text="NC House of Games" styling="App-header" />
         <NavBar />
         <Routes>
@@ -18,7 +25,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/reviews/:review_id" element={<ReviewPage />} />
         </Routes>
-      </div>
+      </Body>
     </BrowserRouter>
   );
 }
