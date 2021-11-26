@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/nh-nc-games-fe/static/css/main.03278891.chunk.css",
+    "main.js": "/nh-nc-games-fe/static/js/main.f355d7d1.chunk.js",
+    "main.js.map": "/nh-nc-games-fe/static/js/main.f355d7d1.chunk.js.map",
+    "runtime-main.js": "/nh-nc-games-fe/static/js/runtime-main.e593b34b.js",
+    "runtime-main.js.map": "/nh-nc-games-fe/static/js/runtime-main.e593b34b.js.map",
+    "static/js/2.e81080f3.chunk.js": "/nh-nc-games-fe/static/js/2.e81080f3.chunk.js",
+    "static/js/2.e81080f3.chunk.js.map": "/nh-nc-games-fe/static/js/2.e81080f3.chunk.js.map",
+    "index.html": "/nh-nc-games-fe/index.html",
+    "static/css/main.03278891.chunk.css.map": "/nh-nc-games-fe/static/css/main.03278891.chunk.css.map",
+    "static/js/2.e81080f3.chunk.js.LICENSE.txt": "/nh-nc-games-fe/static/js/2.e81080f3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e593b34b.js",
+    "static/js/2.e81080f3.chunk.js",
+    "static/css/main.03278891.chunk.css",
+    "static/js/main.f355d7d1.chunk.js"
+  ]
+}
