@@ -1,4 +1,45 @@
 import { useState } from "react";
+import styled from "styled-components";
+
+const Button = styled.button`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid #fddc1e;
+  color: #fddc1e;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+`;
+
+const Select = styled.select`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid #fddc1e;
+  color: #fddc1e;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+
+  option {
+    background: transparent;
+    color: #fddc1e;
+    display: flex;
+  }
+`;
+
+const Option = styled.option`
+  background: transparent;
+  border-radius: 3px;
+  border: 2px solid #fddc1e;
+  color: #fddc1e;
+  margin: 0 1em;
+  padding: 0.25em 1em;
+`;
+
+const Container = styled.div`
+  background: #0a1931;
+  color: #fddc1e;
+
+  padding: 0.25em 1em;
+`;
 
 const QuerySelector = ({ setQueries }) => {
   const [ascDesc, setAscDesc] = useState("desc");
@@ -26,15 +67,15 @@ const QuerySelector = ({ setQueries }) => {
     });
   };
   return (
-    <div className="query-selector">
+    <Container className="query-selector">
       Sort by:{" "}
-      <select onChange={(event) => handleSortBy(event.target.value)}>
+      <Select onChange={(event) => handleSortBy(event.target.value)}>
         <option value="created_at">Created at</option>
         <option value="comment_count">Comment Count</option>
         <option value="votes">Votes</option>
-      </select>
-      <button onClick={handleOrder}>{ascDesc}</button>
-    </div>
+      </Select>
+      <Button onClick={handleOrder}>{ascDesc}</Button>
+    </Container>
   );
 };
 
