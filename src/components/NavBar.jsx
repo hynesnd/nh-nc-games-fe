@@ -15,6 +15,10 @@ const StyledLink = styled(Link)`
   font-weight: bold;
 `;
 
+const LoginLink = styled(StyledLink)`
+  color: #f78b11;
+`;
+
 const NavBar = () => {
   const [categoryList, setCategoryList] = useState([]);
 
@@ -34,7 +38,7 @@ const NavBar = () => {
           </StyledLink>
         );
       })}
-      <StyledLink to="/login">Login</StyledLink>
+      <LoginLink to="/login">Login</LoginLink>
     </Nav>
   );
 };
