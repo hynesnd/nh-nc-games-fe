@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header text="NC House of Games" styling="app-header" />
+        <Header text="NC House of Games" styling="App-header" />
         <NavBar />
         <Routes>
           <Route path="/" element={<Reviews />} />
