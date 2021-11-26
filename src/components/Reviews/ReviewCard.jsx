@@ -52,6 +52,9 @@ const StyledLink = styled(Link)`
   grid-area: "text1";
   color: #185adb;
   font-weight: bold;
+  &:hover {
+    color: orange;
+  }
 `;
 
 const StyledP = styled.p`
