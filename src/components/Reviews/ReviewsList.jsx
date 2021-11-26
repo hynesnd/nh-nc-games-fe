@@ -1,6 +1,15 @@
 import { useState, useEffect } from "react";
 import { getReviews } from "../../utils/api";
 import ReviewCard from "./ReviewCard";
+import styled from "styled-components";
+
+const List = styled.ul`
+  display: flex;
+  row-gap: 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+`;
 
 const ReviewsList = ({ currentCategory, queries }) => {
   const [reviews, setReviews] = useState([]);
@@ -29,11 +38,11 @@ const ReviewsList = ({ currentCategory, queries }) => {
     return <span>{errSpan}</span>;
   } else {
     return (
-      <ul className="reviews-list">
+      <List className="reviews-list">
         {reviews.map((review) => {
           return <ReviewCard key={review.review_id} review={review} />;
         })}
-      </ul>
+      </List>
     );
   }
 };
