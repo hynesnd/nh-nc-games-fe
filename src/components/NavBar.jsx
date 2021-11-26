@@ -13,6 +13,9 @@ const Nav = styled.div`
 const StyledLink = styled(Link)`
   color: #ffc947;
   font-weight: bold;
+  &:hover {
+    color: orange;
+  }
 `;
 
 const LoginLink = styled(StyledLink)`
