@@ -40,13 +40,6 @@ const ImgWrapper = styled.div`
   }
 `;
 
-const Text2wrapper = styled.div`
-  grid-area: "text2";
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 const Title = styled.h4`
   grid-area: "text1";
   color: #185adb;
