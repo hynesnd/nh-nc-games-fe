@@ -25,15 +25,6 @@ const Select = styled.select`
   }
 `;
 
-const Option = styled.option`
-  background: transparent;
-  border-radius: 3px;
-  border: 2px solid #fddc1e;
-  color: #fddc1e;
-  margin: 0 1em;
-  padding: 0.25em 1em;
-`;
-
 const Container = styled.div`
   background: #0a1931;
   color: #fddc1e;
