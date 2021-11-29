@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 import { getSingleReview } from "../../utils/api";
 import VoteButtons from "../VoteButtons";
 import styled from "styled-components";

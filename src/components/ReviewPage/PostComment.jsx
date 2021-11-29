@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useContext } from "react/cjs/react.development";
+import { useContext } from "react";
 import { UserContext } from "../../contexts/UserContext";
 import { postComment } from "../../utils/api";
 import styled from "styled-components";

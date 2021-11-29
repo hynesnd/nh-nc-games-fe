@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
 import { getComments } from "../../utils/api";
 import CommentCard from "./CommentCard";
 import PostComment from "./PostComment";
