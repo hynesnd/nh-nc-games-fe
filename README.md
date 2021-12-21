@@ -54,3 +54,5 @@ This will install all node packages required for normal running of the repo.
 ```bash
 npm start
 ```
+
+4. To begin exploring the site, click the Login link and log in using one of the test usernames, cooljmessy
