@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Neil's Northcoders House of Games API project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Hi! Welcome to my House of Games Frontend App
 
-In the project directory, you can run:
+## My hosted project can be found at https://nh-nc-games.netlify.app/
 
-### `npm start`
+## Project summary
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project applies a matching frontend app to the API produced in my [Back-end project](https://github.com/hynesnd/nh-nc-games).
+It aims to demonstrate:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- A frontend app built with React.js
+- Use of CRUD/Http methods to interact with a RESTful API
 
-### `npm test`
+It is written using:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React.js](https://reactjs.org/)
+- [Axios](https://axios-http.com/) as http client.
+- [Styled-Components](https://styled-components.com/) for applying inline-CSS to React components.
+- [Github](https://github.com/) and [Netlify](https://www.netlify.com/) for git version control and hosting.
 
-### `npm run build`
+## Minimum prerequisites for running this project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You will need to have the following software installed to download and work with this project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js v16.8.0 - Install instructions [Here](https://nodejs.dev/learn/how-to-install-nodejs)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- A code editor such as [VSCode](https://code.visualstudio.com/)
 
-### `npm run eject`
+- A web browser
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Cloning and testing this project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. To begin, run the following bash command in the directory you would like the repo to be located:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+git clone https://github.com/hynesnd/nh-nc-games-fe.git
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+enter your git login details and token.
 
-## Learn More
+2. Open the repo folder in VSCode or your code editor of choice. Next, open a terminal in your code editor and run the following commands:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This will install all node packages required for normal running of the repo.
 
-### Code Splitting
+3. To run a development server of the repo and test out the site, run this command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm start
+```
