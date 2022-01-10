@@ -1,4 +1,4 @@
-# Neil's Northcoders House of Games API project
+# Neil's Northcoders House of Games Front-end project
 
 ## Introduction
 
